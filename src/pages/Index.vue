@@ -40,15 +40,6 @@ export default {
     }
   },
   created(){
-    // while (this.list_value.Count < 40)
-    // {
-    //     var r = random.Next(0, 40);
-
-    //     if (!this.list_value.Contains(r))
-    //     {
-    //         this.list_value.Add(r);
-    //     }
-    // }
     while (this.list_value.length < 40){
       var value = Math.floor(Math.random() * 40)
       if (!this.list_value.includes(value)){
