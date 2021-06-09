@@ -1,4 +1,4 @@
-
+import Simulacro from 'pages/Index.vue'
 const routes = [
   {
     path: '/',
@@ -8,12 +8,25 @@ const routes = [
     ]
   },
 
-  // Always leave this as last one,
-  // but you can also remove it
+  {
+    path: '/simulacro',
+    name: 'Simulacro',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '/simulacro',
+        name: 'Simulacro',
+        component: Simulacro
+      }
+    ]
+  },
+
   {
     path: '*',
     component: () => import('pages/Error404.vue')
-  }
+  },
+
+
+
 ]
 
 export default routes
