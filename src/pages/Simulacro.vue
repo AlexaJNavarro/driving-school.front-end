@@ -1,30 +1,27 @@
 <template>
-  <div class="q-pa-md">
-    <div v-for="list in list_value" :key="list">
+    <div class="q-pa-md">
+      <div v-for="(d, index) of data" :key="index">
 
-      <span class="label bg-primary text-white">{{ data[list].question }}</span>
+        <span class="label bg-primary text-white">{{ d.question }}</span>
 
-      <div v-if="data[list].image != ''">
-        <div class="col-4">
-          <q-img :src="data[list].image" :ratio="4/3"/>
+        <div v-if="d.image != ''">
+          <div class="col-4">
+            <q-img :src="d.image" :ratio="4/3"/>
+          </div>
         </div>
+
+        <div class="q-gutter-sm">
+          <q-radio v-model=d.value :val="1" :label="d.option1" color="pink"/><br>
+          <q-radio v-model=d.value :val="2" :label="d.option2" color="pink"/><br>
+          <q-radio v-model=d.value :val="3" :label="d.option3" color="pink"/><br>
+          <q-radio v-model=d.value :val="4" :label="d.option4" color="pink"/>
+        </div>
+
       </div>
 
-      <!-- <div class="q-gutter-sm" v-for="option in 3" :key="option">
-        <q-radio v-model="data[list].value" :val="option" :label="data[list][option]" color="pink"/>
-      </div> -->
-      <div class="q-gutter-sm">
-        <q-radio v-model="data[list].response" :val="1" :label="data[list].option1" color="pink"/><br>
-        <q-radio v-model="data[list].response" :val="2" :label="data[list].option2" color="pink"/><br>
-        <q-radio v-model="data[list].response" :val="3" :label="data[list].option3" color="pink"/><br>
-        <q-radio v-model="data[list].response" :val="4" :label="data[list].option4" color="pink"/>
-      </div>
+      <q-btn @click="validate" color="red" icon-right="send" label="Enviar respuestas" />
 
     </div>
-
-    <q-btn @click="saludo" color="red" icon-right="send" label="Enviar respuestas" />
-
-  </div>
 </template>
 
 <script>
@@ -34,33 +31,34 @@ export default {
   data () {
     return {
       data:[],
-      list_value:[]
+      score:0
     }
   },
   methods:{
-    saludo(){
-      console.log("Saludo")
-      for (const value of this.data) {
-        console.log(value.response)
+    validate(){
+      for (const d of this.data) {
+        if(d.response == d.value){
+          this.score++
+        }
       }
-
+      console.log(this.score)
     },
     async getAll(){
       const response = await api.get('/data/')
       console.log(response.data)
       this.data= response.data
     },
-    random(){
-      while (this.list_value.length < 3){
-      var value = Math.floor(Math.random() * 3)
-        if (!this.list_value.includes(value)){
-          this.list_value.push(value);
-        }
-      }
-    }
+    // random(){
+    //   while (this.list_value.length < 3){
+    //   var value = Math.floor(Math.random() * 3)
+    //     if (!this.list_value.includes(value)){
+    //       this.list_value.push(value);
+    //     }
+    //   }
+    // }
   },
   mounted(){
-    this.random()
+    // this.random()
     this.getAll()
 
   }
