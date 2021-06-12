@@ -1,20 +1,24 @@
 <template>
     <div class="q-pa-md">
+      <div class="container--img">
+            <q-img class="banner--simulacro" src="../../public/img-simulacro/banner-simulacro.png" :ratio="4/3"/>
+      </div>
+
       <div v-for="(d, index) of data" :key="index">
 
         <span class="label bg-primary text-white">{{ d.question }}</span>
 
         <div v-if="d.image != ''">
           <div class="col-4">
-            <q-img :src="d.image" :ratio="4/3"/>
+            <q-img :src=d.image :ratio="4/3"/>
           </div>
         </div>
 
         <div class="q-gutter-sm">
-          <q-radio v-model=d.value :val="1" :label="d.option1" color="pink"/><br>
-          <q-radio v-model=d.value :val="2" :label="d.option2" color="pink"/><br>
-          <q-radio v-model=d.value :val="3" :label="d.option3" color="pink"/><br>
-          <q-radio v-model=d.value :val="4" :label="d.option4" color="pink"/>
+          <q-radio v-model=d.value :val="1" :label="d.option1" color="primary"/><br>
+          <q-radio v-model=d.value :val="2" :label="d.option2" color="primary"/><br>
+          <q-radio v-model=d.value :val="3" :label="d.option3" color="primary"/><br>
+          <q-radio v-model=d.value :val="4" :label="d.option4" color="primary"/>
         </div>
 
       </div>
@@ -64,3 +68,8 @@ export default {
   }
 }
 </script>
+<style>
+.banner--simulacro{
+  width: 50%;
+}
+</style>
