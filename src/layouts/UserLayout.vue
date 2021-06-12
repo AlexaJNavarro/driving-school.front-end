@@ -10,18 +10,15 @@
                     </div>
                     <div>
                         <div>
-                            <a class="link-header"
-                                href="">
+                            <router-link to="/" class="link-header">
                                 Home
-                            </a>
-                            <a class="link-header"
-                                href="">
-                                SignIn
-                            </a>
-                            <a class="link-header"
-                                href="">
+                            </router-link>
+                            <router-link to="/log-in" class="link-header">
+                                LogIn
+                            </router-link>
+                            <router-link to="/sign-up" class="link-header">
                                 SignUp
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -32,7 +29,24 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    
 
+    <footer class="bg-info">
+        <div class="container">
+            <div class="flex justify-between" style="padding: .5rem 0">
+                <div class="flex flex-column">
+                    <a class="footer-item-links" href="">@AlexandraNavarro</a>
+                    <a class="footer-item-links" href="">@LeonardoNolasco</a>
+                </div>
+                <div class="flex align-items-center">
+                    <img
+                        width="35px" 
+                        height="37px"
+                        src="../../public/images/home/car.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
   </q-layout>
 </template>
 <script>
@@ -41,27 +55,19 @@ export default {
 }
 </script>
 
-<style>
-    .container {
-        max-width: 1024px;
-        margin: auto
-    }
-    .w100 {
-        width: 100%;
-    }
-    .link-header {
+<style lang="scss">
+@import '../css/global';
+    .footer-item-links {
         font-family: Saira;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
-        line-height: 38px;
-        text-decoration: none;
+        line-height: 28px;
+        text-align: center;
+
         color: #000000;
-        padding-right: 1rem;
-    }
-    .link-header:hover {
-        color: #6C63FE;
-        transition: .5s;
+        text-decoration: none;
+        padding: .2rem 0
     }
 </style>
 

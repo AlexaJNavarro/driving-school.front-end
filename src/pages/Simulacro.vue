@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import {api} from 'boot/axios'
+import {apiAle} from 'boot/axios'
 export default {
   name: 'Simulacro',
   data () {
@@ -44,7 +44,7 @@ export default {
       console.log(this.score)
     },
     async getAll(){
-      const response = await api.get('/data/')
+      const response = await apiAle.get('/data/')
       console.log(response.data)
       this.data= response.data
     },

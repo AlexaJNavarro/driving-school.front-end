@@ -1,24 +1,21 @@
 <template>
-    <div>
-        <h1 class="roboto">
-            Roboto
-        </h1>
-        <h1 class="saira">
-            Saira
-        </h1>
-    </div>
+    <q-page>
+        <div class="container">
+            <div class="ptb-3">
+                <div class="flex justify-center">
+                    <img 
+                        class="w40"
+                        src="../../../public/images/errors/403.svg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </q-page>
 </template>
 <script>
 export default {
     name: 'Page403'
 }
 </script>
-<style>
-    .roboto{
-        font-family: 'Roboto', sans-serif
-    }
-    
-    .saira{
-        font-family: 'Saira', sans-serif
-    }
+<style lang="scss">
+@import "../../css/global";
 </style>
