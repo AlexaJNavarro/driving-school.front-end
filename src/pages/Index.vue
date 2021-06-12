@@ -2,13 +2,8 @@
   <q-page>
     <div class="container">
       <div>
-<<<<<<< HEAD
-        <div>
-          <q-img
-=======
         <div class="ptb-3">
-          <q-img 
->>>>>>> 900189bc0da3d11e3b96f5ec854be5eed1b14ebb
+          <q-img
             src="../../public/images/home/banner-home.svg">
           </q-img>
         </div>
@@ -19,19 +14,12 @@
               <h3 class="text-center subtitle">
                 Objetivos
               </h3>
-<<<<<<< HEAD
-              <p>
-                Permitir que el estudiante
-                desde la comodidad de tu hogar
-              </p>
-=======
               <div class="flex justify-center">
                 <p class="text-center text-roboto w60">
-                  Permitir que el estudiante  
+                  Permitir que el estudiante
                   desde la comodidad de tu hogar
                 </p>
               </div>
->>>>>>> 900189bc0da3d11e3b96f5ec854be5eed1b14ebb
             </div>
             <div>
               <img src="../../public/images/home/objetivos.svg" alt="">
@@ -42,17 +30,7 @@
         <div class="ptb-3">
           <div class="flex reverse justify-between">
             <div>
-<<<<<<< HEAD
-              <h3>
-                Objetivos
-              </h3>
-              <p>
-                Permitir que el estudiante
-                desde la comodidad de tu hogar
-              </p>
-=======
               <img src="../../public/images/home/beneficios.jpg" alt="">
->>>>>>> 900189bc0da3d11e3b96f5ec854be5eed1b14ebb
             </div>
             <div>
               <h3 class="text-center subtitle">
@@ -60,7 +38,7 @@
               </h3>
               <div class="flex justify-center">
                 <p class="text-center text-roboto w60">
-                  Permitir que el estudiante  
+                  Permitir que el estudiante
                   desde la comodidad de tu hogar
                 </p>
               </div>

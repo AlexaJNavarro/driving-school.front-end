@@ -57,7 +57,7 @@ export default {
 	      "score":this.score*2
       }
 
-      const response = await api.post('/data/',data)
+      const response = await apiAle.post('/data/',data)
       console.log(response.data)
     },
     validate(){
@@ -74,12 +74,7 @@ export default {
       }
     },
     async getAll(){
-<<<<<<< HEAD
-      const response = await api.get('/data/')
-=======
       const response = await apiAle.get('/data/')
-      console.log(response.data)
->>>>>>> 900189bc0da3d11e3b96f5ec854be5eed1b14ebb
       this.data= response.data
     }
   },
