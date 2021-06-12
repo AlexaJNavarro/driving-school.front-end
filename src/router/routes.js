@@ -5,6 +5,9 @@ import ListAlumn from 'pages/List_alum.vue'
 import DetalleInstructor from 'pages/DetalleInstructor.vue'
 import LogIn from 'pages/home/LogIn.vue'
 import SignUp from 'pages/home/SignUp.vue'
+import Paquete from 'pages/Paquete.vue'
+import AgregarNotas from 'pages/notes/AgregarNotes.vue'
+import ActualizarNotas from 'pages/notes/ActualizarNotas.vue'
 
 import MyAccount from 'pages/student/MyAccount.vue'
 const routes = [
@@ -38,10 +41,26 @@ const routes = [
       },
       {
         path: 'instructor',
-        component: DetalleInstructor,
+        component: DetalleInstructor
+      },
+      ,
+      {
+        path: 'paquete',
+        component: Paquete
+      },
+      {
         path: 'simulacro',
         component: Simulacro
-      }
+      },
+      {
+        path: 'actualizar-notas',
+        component: ActualizarNotas
+      },
+      {
+        path: 'agregar-notas',
+        component: AgregarNotas
+      },
+
 
     ]
   },
