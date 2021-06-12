@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import {api} from 'boot/axios'
+import {apiAle} from 'boot/axios'
 export default {
   name: 'Simulacro',
   data () {
@@ -74,7 +74,12 @@ export default {
       }
     },
     async getAll(){
+<<<<<<< HEAD
       const response = await api.get('/data/')
+=======
+      const response = await apiAle.get('/data/')
+      console.log(response.data)
+>>>>>>> 900189bc0da3d11e3b96f5ec854be5eed1b14ebb
       this.data= response.data
     }
   },

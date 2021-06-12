@@ -1,8 +1,15 @@
 import Simulacro from 'pages/Simulacro.vue'
 import Forbidden from 'pages/errors/403.vue'
+<<<<<<< HEAD
 import NotFound from  'pages/404.vue'
 import ListAlumn from 'pages/List_alum.vue'
 import DetalleInstructor from 'pages/DetalleInstructor.vue'
+=======
+import LogIn from 'pages/home/LogIn.vue'
+import SignUp from 'pages/home/SignUp.vue'
+
+import MyAccount from 'pages/student/MyAccount.vue'
+>>>>>>> 900189bc0da3d11e3b96f5ec854be5eed1b14ebb
 const routes = [
   {
     path: '/',
@@ -13,14 +20,19 @@ const routes = [
         component: () => import('pages/Index.vue')
       },
       {
-        path: 'simulacro',
-        component: Simulacro
+        path: 'log-in',
+        component: LogIn,
+      },
+      {
+        path: 'sign-up',
+        component: SignUp,
       },
       {
         path: '403',
         component: Forbidden,
       },
       {
+<<<<<<< HEAD
         path: '404',
         component: NotFound,
       },
@@ -31,10 +43,24 @@ const routes = [
       {
         path: 'instructor',
         component: DetalleInstructor,
+=======
+        path: 'simulacro',
+        component: Simulacro
+>>>>>>> 900189bc0da3d11e3b96f5ec854be5eed1b14ebb
       }
 
     ]
   },
+  {
+    path: '/',
+    component: () => import('layouts/StudentLayout.vue'),
+    children: [
+      {
+        path: 'my-account',
+        component: MyAccount
+      }
+    ],
+  }
   // {
   //   path: '/simulacro',
   //   component: Simulacro
