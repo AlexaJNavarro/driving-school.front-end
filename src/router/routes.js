@@ -1,7 +1,13 @@
 import Simulacro from 'pages/Simulacro.vue'
 import Forbidden from 'pages/errors/403.vue'
+import NotFound from  'pages/404.vue'
+import ListAlumn from 'pages/List_alum.vue'
+import DetalleInstructor from 'pages/DetalleInstructor.vue'
 import LogIn from 'pages/home/LogIn.vue'
 import SignUp from 'pages/home/SignUp.vue'
+import Paquete from 'pages/Paquete.vue'
+import AgregarNotas from 'pages/notes/AgregarNotes.vue'
+import ActualizarNotas from 'pages/notes/ActualizarNotas.vue'
 
 import MyAccount from 'pages/student/MyAccount.vue'
 
@@ -29,10 +35,42 @@ const routes = [
         component: Forbidden,
       },
       {
+        path: '404',
+        component: NotFound,
+      },
+      {
+        path: 'listar-alumno',
+        component: ListAlumn,
+      },
+      {
+        path: 'instructor',
+        component: DetalleInstructor
+      },
+      ,
+      {
+        path: 'paquete',
+        component: Paquete
+      },
+      {
         path: 'simulacro',
+<<<<<<< HEAD
         component: Simulacro,
         meta: { requieresAuth: true }
       }
+=======
+        component: Simulacro
+      },
+      {
+        path: 'actualizar-notas',
+        component: ActualizarNotas
+      },
+      {
+        path: 'agregar-notas',
+        component: AgregarNotas
+      },
+
+
+>>>>>>> alexa
     ]
   },
   {
