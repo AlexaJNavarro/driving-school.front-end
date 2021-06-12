@@ -3,7 +3,7 @@ import Forbidden from 'pages/errors/403.vue'
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/UserLayout.vue'),
     children: [
       {
         path: '',
