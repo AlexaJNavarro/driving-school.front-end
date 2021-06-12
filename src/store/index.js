@@ -5,6 +5,16 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+export default new Vuex.Store({
+  state: {
+    student: 0
+  },
+  mutations: {
+    saveUser(state, user) {
+      state.student = user
+    }
+  }
+})
 /*
  * If not building with SSR mode, you can
  * directly export the Store instantiation;
@@ -14,7 +24,7 @@ Vue.use(Vuex)
  * with the Store instance.
  */
 
-export default function (/* { ssrContext } */) {
+/* export default function () {
   const Store = new Vuex.Store({
     modules: {
       // example
@@ -27,3 +37,4 @@ export default function (/* { ssrContext } */) {
 
   return Store
 }
+ */
