@@ -40,7 +40,18 @@ const routes = [
         component: MyAccount
       }
     ],
+  },
+  {
+    path: '/admin',
+    component: () => import('layouts/AdminLayout.vue'),
+    children: [
+      {
+        path: '/',
+        component: MyAccount
+      }
+    ],
   }
+
   // {
   //   path: '/simulacro',
   //   component: Simulacro
