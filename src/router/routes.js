@@ -4,6 +4,9 @@ import LogIn from 'pages/home/LogIn.vue'
 import SignUp from 'pages/home/SignUp.vue'
 
 import MyAccount from 'pages/student/MyAccount.vue'
+
+import AdminHome from 'pages/admin/Home.vue'
+import AdminAssign from 'pages/admin/Assign.vue'
 const routes = [
   {
     path: '/',
@@ -27,7 +30,8 @@ const routes = [
       },
       {
         path: 'simulacro',
-        component: Simulacro
+        component: Simulacro,
+        meta: { requieresAuth: true }
       }
     ]
   },
@@ -47,7 +51,11 @@ const routes = [
     children: [
       {
         path: '/',
-        component: MyAccount
+        component: AdminHome
+      },
+      {
+        path: 'assign',
+        component: AdminAssign
       }
     ],
   }

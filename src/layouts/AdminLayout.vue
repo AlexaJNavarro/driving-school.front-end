@@ -8,8 +8,10 @@
             <div>
               <div>
                 <router-link to="/log-in" class="link-header"> Packages </router-link>
-                <router-link to="/log-in" class="link-header"> Instructor </router-link>
-                <router-link to="/my-account" class="link-header"> Perfil </router-link>
+                <router-link to="/admin/assign" class="link-header">
+                  Instructor
+                </router-link>
+                <router-link to="/admin" class="link-header"> Perfil </router-link>
                 <router-link to="/sign-up" class="link-header"> Salir </router-link>
               </div>
             </div>

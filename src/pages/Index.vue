@@ -3,26 +3,21 @@
     <div class="container">
       <div>
         <div class="ptb-3">
-          <q-img 
-            src="../../public/images/home/banner-home.svg">
-          </q-img>
+          <q-img src="../../public/images/home/banner-home.svg"> </q-img>
         </div>
 
         <div class="ptb-3">
           <div class="flex justify-between">
             <div>
-              <h3 class="text-center subtitle">
-                Objetivos
-              </h3>
+              <h3 class="text-center subtitle">Objetivos</h3>
               <div class="flex justify-center">
                 <p class="text-center text-roboto w60">
-                  Permitir que el estudiante  
-                  desde la comodidad de tu hogar
+                  Permitir que el estudiante desde la comodidad de tu hogar
                 </p>
               </div>
             </div>
             <div>
-              <img src="../../public/images/home/objetivos.svg" alt="">
+              <img src="../../public/images/home/objetivos.svg" alt="" />
             </div>
           </div>
         </div>
@@ -30,22 +25,18 @@
         <div class="ptb-3">
           <div class="flex reverse justify-between">
             <div>
-              <img src="../../public/images/home/beneficios.jpg" alt="">
+              <img src="../../public/images/home/beneficios.jpg" alt="" />
             </div>
             <div>
-              <h3 class="text-center subtitle">
-                Beneficios
-              </h3>
+              <h3 class="text-center subtitle">Beneficios</h3>
               <div class="flex justify-center">
                 <p class="text-center text-roboto w60">
-                  Permitir que el estudiante  
-                  desde la comodidad de tu hogar
+                  Permitir que el estudiante desde la comodidad de tu hogar
                 </p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </q-page>
@@ -53,14 +44,21 @@
 
 <script>
 export default {
-  name: 'PageIndex',
-  data () {
-    return {
-
+  name: "PageIndex",
+  data() {
+    return {};
+  },
+  created() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user.user.rol != "Client") {
+      if (user.user.rol == "Admin") {
+        this.$router.push("admin");
+      } else {
+        this.$router.push("");
+      }
     }
   },
-
-}
+};
 </script>
 <style>
 @import "../css/global.scss";
@@ -84,6 +82,4 @@ export default {
 
   color: #000000;
 }
-
-
 </style>

@@ -128,11 +128,22 @@ export default {
       try {
         const response = await apiLeo.post("/users/log-in/dni", this.userDni);
         if (response.status === 200) {
+          localStorage.setItem("user", JSON.stringify(response.data.data));
           this.saveUser(response.data.data);
           Notify.create({
             message: `Bienvenido ${response.data.data.user.names}`,
             color: "primary",
           });
+          switch (response.data.data.user.rol) {
+            case "Client":
+              this.$router.push("students/my-account");
+              break;
+            case "Admin":
+              this.$router.push("admin");
+              break;
+            default:
+              break;
+          }
         }
         if (response.status === 400) {
           Notify.create({
@@ -151,11 +162,22 @@ export default {
       try {
         const response = await apiLeo.post("/users/log-in/email", this.userEmail);
         if (response.status === 200) {
-          this.saveUser(response.data.data);
+          localStorage.setItem("user", JSON.stringify(response.data.data));
           Notify.create({
             message: `Bienvenido ${response.data.data.user.names}`,
             color: "primary",
           });
+          switch (response.data.data.user.rol) {
+            case "Client":
+              this.$router.push("students/my-account");
+              break;
+            case "Admin":
+              this.$router.push("admin");
+              break;
+            default:
+              break;
+          }
+          this.$router.push("");
         }
 
         if (response.status === 400) {

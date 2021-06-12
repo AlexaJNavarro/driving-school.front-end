@@ -49,9 +49,17 @@
 import { mapState, mapMutations } from "vuex";
 export default {
   name: "PageMyAccount",
-  methods: {},
-  computed: {
-    ...mapState(["student"]),
+  data() {
+    return {
+      student: {},
+    };
+  },
+  created() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    this.student = user;
+    if (user.user.rol != "Client") {
+      this.$router.push("403");
+    }
   },
 };
 </script>
