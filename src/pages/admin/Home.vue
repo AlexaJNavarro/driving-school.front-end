@@ -37,6 +37,10 @@ export default {
   },
   created() {
     const user = JSON.parse(localStorage.getItem("user"));
+    console.log(user);
+    if (user == "" || user == "undefined" || user == null) {
+      this.$router.push("log-in");
+    }
     if (user.user.rol != "Admin") {
       this.$router.push("403");
     }

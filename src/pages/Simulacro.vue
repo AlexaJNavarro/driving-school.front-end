@@ -61,6 +61,9 @@ export default {
 
   created() {
     const user = JSON.parse(localStorage.getItem("user"));
+    if (user == "" || user == "undefined" || user == null) {
+      this.$router.push("log-in");
+    }
     if (user.user.rol != "Client" || !user.user.status_sale) {
       this.$router.push("403");
     }
