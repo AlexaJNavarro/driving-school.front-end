@@ -5,13 +5,13 @@
           <div class="container-form">
             <div class="q-pa-md">
               <div class="q-gutter-y-md column" style="max-width: 300px">
-                  <q-input v-model="simulacro" label="Nota del Simulacro" :dense="dense" />
-                  <q-input v-model="teoria" label="Nota del examen Teorico" :dense="dense" />
-                  <q-input v-model="practica" label="Nota del examen Practico" :dense="dense" />
+                  <q-input v-model="nota.simulacrum" label="Nota del Simulacro" :dense="dense" />
+                  <q-input v-model="nota.theoric_exam" label="Nota del examen Teorico" :dense="dense" />
+                  <q-input v-model="nota.practice_exam" label="Nota del examen Practico" :dense="dense" />
               </div>
             </div>
             <div class="q-pa-md q-gutter-sm">
-              <q-btn :loading="loading4" color="primary" @click="send(4)" style="width: 150px">
+              <q-btn :loading="loading4" color="primary" @click="send()" style="width: 150px">
                 Button
                 <template v-slot:loading>
                   <q-spinner-hourglass class="on-left" />
@@ -20,7 +20,6 @@
               </q-btn>
             </div>
           </div>
-
           <q-img class="banner--actualizar" src="../../../public/img-notas/update.png"/>
 
       </div>
@@ -29,7 +28,7 @@
 </template>
 
 <script>
-
+import {apiAle} from 'boot/axios'
 export default {
   name: 'ActualizarNotas',
   data () {
@@ -37,18 +36,39 @@ export default {
       text:"",
       dense: false,
       loading4: false,
-      id_est:'',
-      id_inst:'',
-      simulacro:0,
-      hora:0,
-      teoria:0,
-      practica:0
+      _id:'60c32b27e4d11011743ea10a',
+      nota:{
+        id_student: '60c30ac3b8301d1a78689424',
+        id_teacher: '60c30ac3b8301d2a78689466',
+        notes:{
+          simulacrum: 4 * 2,
+          hours: 3,
+          theoric_exam: 4,
+          practice_exam: 4
+        }
+
+      }
+
     }
   },
   methods:{
-    async send(number){
-      this.simulateProgress(number)
+    async send(){
+      var _id=this._id
+      // var data={
+      //   "id_student": this.id_est,
+      //   "id_teacher": this.id_inst,
+      //   "notes":{
+      //     "simulacrum": this.simulacro * 2,
+      //     "hours": this.hora,
+      //     "theoric_exam": this.teoria,
+      //     "practice_exam": this.practica
+      //   }
+      // }
 
+      this.nota.id_teacher=JSON.parse(localStorage.getItem("user"))._id
+
+      const response = await apiAle.put(`/notes/60c32b27e4d11011743ea10a`,this.nota)
+      console.log(response.data)
 
     },
 
