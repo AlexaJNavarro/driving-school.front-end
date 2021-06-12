@@ -1,6 +1,8 @@
 import Simulacro from 'pages/Simulacro.vue'
 import Forbidden from 'pages/errors/403.vue'
 import NotFound from  'pages/404.vue'
+import ListAlumn from 'pages/List_alum.vue'
+import DetalleInstructor from 'pages/DetalleInstructor.vue'
 const routes = [
   {
     path: '/',
@@ -22,6 +24,14 @@ const routes = [
         path: '404',
         component: NotFound,
       },
+      {
+        path: 'listar-alumno',
+        component: ListAlumn,
+      },
+      {
+        path: 'instructor',
+        component: DetalleInstructor,
+      }
 
     ]
   },

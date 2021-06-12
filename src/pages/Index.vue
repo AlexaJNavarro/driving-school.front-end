@@ -3,7 +3,7 @@
     <div class="container">
       <div>
         <div>
-          <q-img 
+          <q-img
             src="../../public/images/home/banner-home.svg">
           </q-img>
         </div>
@@ -14,7 +14,7 @@
                 Objetivos
               </h3>
               <p>
-                Permitir que el estudiante  
+                Permitir que el estudiante
                 desde la comodidad de tu hogar
               </p>
             </div>
@@ -31,7 +31,7 @@
                 Objetivos
               </h3>
               <p>
-                Permitir que el estudiante  
+                Permitir que el estudiante
                 desde la comodidad de tu hogar
               </p>
             </div>
@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
   </q-page>
