@@ -105,6 +105,8 @@
 <script>
 import { apiLeo } from "boot/axios";
 import { Notify } from "quasar";
+import { mapMutations } from "vuex";
+
 export default {
   name: "PageLogIn",
   data() {
@@ -121,23 +123,23 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(["saveUser"]),
     async LogInDni() {
       try {
         const response = await apiLeo.post("/users/log-in/dni", this.userDni);
         if (response.status === 200) {
+          this.saveUser(response.data.data);
           Notify.create({
             message: `Bienvenido ${response.data.data.user.names}`,
             color: "primary",
           });
-
-          if (response.status === 400) {
-            Notify.create({
-              message: `Ingrese bien sus datos`,
-              color: "danger",
-            });
-          }
         }
-        console.log(response);
+        if (response.status === 400) {
+          Notify.create({
+            message: `Ingrese bien sus datos`,
+            color: "danger",
+          });
+        }
       } catch (error) {
         Notify.create({
           type: "negative",
@@ -149,19 +151,19 @@ export default {
       try {
         const response = await apiLeo.post("/users/log-in/email", this.userEmail);
         if (response.status === 200) {
+          this.saveUser(response.data.data);
           Notify.create({
             message: `Bienvenido ${response.data.data.user.names}`,
             color: "primary",
           });
-
-          if (response.status === 400) {
-            Notify.create({
-              message: `Ingrese bien sus datos`,
-              color: "danger",
-            });
-          }
         }
-        console.log(response);
+
+        if (response.status === 400) {
+          Notify.create({
+            message: `Ingrese bien sus datos`,
+            color: "danger",
+          });
+        }
       } catch (error) {
         Notify.create({
           type: "negative",

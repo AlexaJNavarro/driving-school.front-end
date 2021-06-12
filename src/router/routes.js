@@ -32,7 +32,7 @@ const routes = [
     ]
   },
   {
-    path: '/',
+    path: '/students',
     component: () => import('layouts/StudentLayout.vue'),
     children: [
       {
