@@ -1,4 +1,5 @@
 import Simulacro from 'pages/Simulacro.vue'
+import Forbidden from 'pages/errors/403.vue'
 const routes = [
   {
     path: '/',
@@ -11,6 +12,10 @@ const routes = [
       {
         path: 'simulacro',
         component: Simulacro
+      },
+      {
+        path: '403',
+        component: Forbidden,
       }
     ]
   },
