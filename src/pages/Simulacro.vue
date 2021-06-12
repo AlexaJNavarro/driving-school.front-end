@@ -43,17 +43,30 @@ export default {
   data () {
     return {
       data:[],
-      score:0
+      score:0,
+      id:"60c32b2fe4d11011743ea222",
+      id_student:"60c32b2fe4d11011743ea115"
     }
   },
   methods:{
+    async send(){
+      console.log(this.score*2)
+      var data={
+	      "id":this.id,
+	      "id_student":this.id_student,
+	      "score":this.score*2
+      }
+
+      const response = await api.post('/data/',data)
+      console.log(response.data)
+    },
     validate(){
       for (const d of this.data) {
         if(d.response == d.value){
           this.score++
         }
       }
-      console.log(this.score)
+      this.send()
     },
     clean(){
       for (const d of this.data) {
@@ -62,20 +75,10 @@ export default {
     },
     async getAll(){
       const response = await api.get('/data/')
-      console.log(response.data)
       this.data= response.data
-    },
-    // random(){
-    //   while (this.list_value.length < 3){
-    //   var value = Math.floor(Math.random() * 3)
-    //     if (!this.list_value.includes(value)){
-    //       this.list_value.push(value);
-    //     }
-    //   }
-    // }
+    }
   },
   mounted(){
-    // this.random()
     this.getAll()
 
   }

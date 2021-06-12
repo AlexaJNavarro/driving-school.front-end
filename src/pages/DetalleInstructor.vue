@@ -7,7 +7,7 @@
               <h3 class="title">
                 Bienvenido
               </h3>
-              <p class="value_name">
+              <p class="value_name" color="primary">
                 {{name}}
               </p>
             </div>
