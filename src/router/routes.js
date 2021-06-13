@@ -41,8 +41,27 @@ const routes = [
       {
         path: 'paquete',
         component: Paquete
+<<<<<<< HEAD
+      },
+      {
+        path: 'simulacro',
+        component: Simulacro,
+        meta: { requieresAuth: true }
+      },
+      {
+        path: 'actualizar-notas',
+        component: ActualizarNotas
+      },
+      {
+        path: 'agregar-notas',
+        component: AgregarNotas
+      },
+
+
+=======
       }
 
+>>>>>>> ff53edafd4f68b21fff80bfb83dfb5a16be51e4c
     ]
   },
   {

@@ -4,43 +4,7 @@
       <div class="container-banner-listAlumn">
         <q-img class="banner--alumn" src="../../public/img-list-notes/list-alum.png" />
       </div>
-
-      <div>
-        <div class="container">
-          <div class="flex flex-row justify-center">
-            <div v-for="item of [2, 3, 3, 4, 4]" :key="item">
-              <q-card class="my-card mrl-1 mb-1" style="width: 300px">
-                <q-img
-                  src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"
-                  class="img-card"
-                ></q-img>
-                <div class="container-button-paquete">
-                  <q-card-actions>
-                    <h4>$250</h4>
-                    <div class="q-pa-md q-gutter-sm">
-                      <q-btn
-                        unelevated
-                        rounded
-                        color="primary"
-                        label="Comprar"
-                        class="botton-Comprar"
-                      />
-                      <q-btn
-                        outline
-                        rounded
-                        color="primary"
-                        label="Detalle"
-                        class="botton-Detalle"
-                      />
-                    </div>
-                  </q-card-actions>
-                </div>
-              </q-card>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      
   </q-page>
 </template>
 

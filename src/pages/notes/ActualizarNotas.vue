@@ -41,10 +41,10 @@ export default {
         id_student: '60c30ac3b8301d1a78689424',
         id_teacher: '60c30ac3b8301d2a78689466',
         notes:{
-          simulacrum: 4 * 2,
-          hours: 3,
-          theoric_exam: 4,
-          practice_exam: 4
+          simulacrum: 1 * 2,
+          hours: 1,
+          theoric_exam: 1,
+          practice_exam: 1
         }
 
       }
@@ -65,7 +65,7 @@ export default {
       //   }
       // }
 
-      this.nota.id_teacher=JSON.parse(localStorage.getItem("user"))._id
+      // this.nota.id_teacher=JSON.parse(localStorage.getItem("user"))._id
 
       const response = await apiAle.put(`/notes/60c32b27e4d11011743ea10a`,this.nota)
       console.log(response.data)
