@@ -24,34 +24,17 @@
                 <div class="container-button-listAlumn">
                   <q-card-actions>
                     <div class="q-pa-md q-gutter-sm">
+                      <!-- <router-link :to="{name:'Movie',params:{id:movie.id}}">
+
+                      </router-link> -->
+
                       <q-btn unelevated rounded color="primary" label="Actualizar" class="botton-Actualizar"/>
                       <q-btn outline rounded color="primary" label="Eliminar"  class="botton-Eliminar" />
                     </div>
                   </q-card-actions>
                 </div>
               </q-card>
-               <q-card class="my-card">
-                  <q-img src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" class="img-card"></q-img>
-                <div class="container-button-listAlumn">
-                  <q-card-actions>
-                    <div class="q-pa-md q-gutter-sm">
-                      <q-btn unelevated rounded color="primary" label="Actualizar" class="botton-Actualizar"/>
-                      <q-btn outline rounded color="primary" label="Eliminar"  class="botton-Eliminar" />
-                    </div>
-                  </q-card-actions>
-                </div>
-              </q-card>
-               <q-card class="my-card">
-                  <q-img src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg" class="img-card"></q-img>
-                <div class="container-button-listAlumn">
-                  <q-card-actions>
-                    <div class="q-pa-md q-gutter-sm">
-                      <q-btn unelevated rounded color="primary" label="Actualizar" class="botton-Actualizar"/>
-                      <q-btn outline rounded color="primary" label="Eliminar"  class="botton-Eliminar" />
-                    </div>
-                  </q-card-actions>
-                </div>
-              </q-card>
+
               </div>
             </div>
 

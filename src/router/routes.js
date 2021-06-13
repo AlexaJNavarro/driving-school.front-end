@@ -53,12 +53,8 @@ const routes = [
       },
       {
         path: 'simulacro',
-<<<<<<< HEAD
         component: Simulacro,
         meta: { requieresAuth: true }
-      }
-=======
-        component: Simulacro
       },
       {
         path: 'actualizar-notas',
@@ -70,7 +66,6 @@ const routes = [
       },
 
 
->>>>>>> alexa
     ]
   },
   {
