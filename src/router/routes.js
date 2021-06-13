@@ -35,10 +35,6 @@ const routes = [
         component: Forbidden,
       },
       {
-        path: '404',
-        component: NotFound,
-      },  
-      {
         path: 'paquete',
         component: Paquete
       }
@@ -96,17 +92,15 @@ const routes = [
         component: AgregarNotas
       },
     ],
-  }
+  },
 
-  // {
-  //   path: '/simulacro',
-  //   component: Simulacro
-  // },
+  {
+    path: '*',
+    component: NotFound,
 
-  // {
-  //   path: '*',
-  //   component: () => import('pages/Error404.vue')
-  // },
+  },
+
+
 ]
 
 export default routes

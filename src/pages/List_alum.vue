@@ -17,11 +17,19 @@ export default {
   },
   async created() {
     const user = JSON.parse(localStorage.getItem("user"));
+    if (user == null) {
+      this.$router.push("log-in");
+    }
+    if(user.user.rol!='Instructor'){
+      this.$router.push("/403");
+    }
+
     const response = await apiLeo.get(`/student-teacher/teacher/${user.user._id}`, {
       headers: {
         Authorization: user.user.token,
       },
     });
+
   },
 };
 </script>

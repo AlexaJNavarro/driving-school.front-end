@@ -140,6 +140,9 @@ export default {
     if (user == null) {
       this.$router.push("log-in");
     }
+    if(user.user.rol!='Client'){
+      this.$router.push("/403");
+    }
   },
 };
 </script>
