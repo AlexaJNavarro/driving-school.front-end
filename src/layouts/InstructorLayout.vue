@@ -7,14 +7,10 @@
             <div></div>
             <div>
               <div>
-                <router-link to="/" class="link-header"> Home </router-link>
-                <router-link to="/log-in" class="link-header"> Packages </router-link>
-                <router-link to="/students/simulacro" class="link-header">
-                  Simulacro
+                <router-link to="/instructor/studends" class="link-header">
+                  Alumnos
                 </router-link>
-                <router-link to="/students/my-account" class="link-header">
-                  Perfil
-                </router-link>
+                <router-link to="/instructor" class="link-header"> Perfil </router-link>
                 <router-link to="/sign-up" class="link-header"> Salir </router-link>
               </div>
             </div>
