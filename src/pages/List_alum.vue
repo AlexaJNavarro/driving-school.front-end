@@ -114,10 +114,9 @@ export default {
     const user = JSON.parse(localStorage.getItem("user"));
     const response = await apiLeo.get(`/student-teacher/teacher/${user.user._id}`, {
       headers: {
-        Authorization: JSON.parse(localStorage.getItem("user")).token,
+        Authorization: user.user.token,
       },
     });
-    console.log(response);
   },
 };
 </script>

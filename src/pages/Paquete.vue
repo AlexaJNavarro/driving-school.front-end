@@ -20,7 +20,43 @@
               </div>
             </div>
             </div> -->
-      <div class="container-card">
+
+      <div class="container">
+        <div class="flex flex-row justify-center">
+          <div v-for="item of [2, 3, 3, 4, 4, 5, 5]" :key="item">
+            <q-card class="my-card mrl-1 mb-1" style="width: 300px">
+              <q-img
+                src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"
+                class="img-card"
+              ></q-img>
+              <div class="container-button-paquete">
+                <q-card-actions>
+                  <h4>$250</h4>
+                  <div class="q-pa-md q-gutter-sm">
+                    <q-btn
+                      unelevated
+                      rounded
+                      color="primary"
+                      label="Comprar"
+                      class="botton-Comprar"
+                    />
+                    <q-btn
+                      outline
+                      rounded
+                      color="primary"
+                      label="Detalle"
+                      class="botton-Detalle"
+                    />
+                  </div>
+                </q-card-actions>
+              </div>
+            </q-card>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- < <div class="container-card">
         <div class="sub-container-card" v-for="i of 1" :key="i">
           <q-card class="my-card">
             <q-img
@@ -105,7 +141,7 @@
           </q-card>
         </div>
       </div>
-    </div>
+    </div> -->
   </q-page>
 </template>
 
@@ -117,7 +153,9 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="scss">
+@import "../css/global";
+
 .container-banner-paquete {
   margin-top: 2rem;
   margin-bottom: 5rem;
