@@ -84,22 +84,6 @@ export default {
   name: "Simulacro",
   data() {
     return {
-<<<<<<< HEAD
-      data:[],
-      score:0,
-      id:"60c32b2fe4d11011743ea222",
-      id_student:"60c32b2fe4d11011743ea115"
-    }
-  },
-  methods:{
-    async send(){
-      console.log(this.score*2)
-      var data={
-	      "id":this.id,
-	      "id_student":this.id_student,
-	      "score":this.score*2
-      }
-=======
       data: [],
       score: 0,
       id: "60c32b2fe4d11011743ea222",
@@ -114,7 +98,6 @@ export default {
         id_student: this.id_student,
         score: this.score * 2,
       };
->>>>>>> ff53edafd4f68b21fff80bfb83dfb5a16be51e4c
 
       const response = await apiAle.post("/data/", data);
       console.log(response.data);
@@ -130,33 +113,12 @@ export default {
         });
       }
     },
-<<<<<<< HEAD
-    validate(){
-=======
     validate() {
->>>>>>> ff53edafd4f68b21fff80bfb83dfb5a16be51e4c
       for (const d of this.data) {
         if (d.response == d.value) {
           this.score++;
         }
       }
-<<<<<<< HEAD
-      this.send()
-    },
-    clean(){
-      for (const d of this.data) {
-        d.value=0
-      }
-    },
-    async getAll(){
-      const response = await apiAle.get('/data/')
-      this.data= response.data
-    }
-  },
-  mounted(){
-    this.getAll()
-  },
-=======
       this.send();
     },
     clean() {
@@ -173,14 +135,13 @@ export default {
     this.getAll();
   },
 
->>>>>>> ff53edafd4f68b21fff80bfb83dfb5a16be51e4c
   created() {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user == null) {
       this.$router.push("log-in");
     }
-  }
-}
+  },
+};
 </script>
 <style>
 .banner--simulacro {

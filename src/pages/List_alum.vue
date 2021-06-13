@@ -4,7 +4,7 @@
       <div class="container-banner-listAlumn">
         <q-img class="banner--alumn" src="../../public/img-list-notes/list-alum.png" />
       </div>
-      
+    </div>
   </q-page>
 </template>
 
