@@ -24,7 +24,7 @@
 
                     <div class="ptb-1">
                       <q-select
-                        v-model="id_client"
+                        v-model="assign.id_client"
                         :options="StudentsIds"
                         rounded
                         outlined
@@ -34,7 +34,7 @@
 
                     <div class="ptb-1">
                       <q-select
-                        v-model="id_teacher"
+                        v-model="assign.id_teacher"
                         :options="teacherIds"
                         rounded
                         outlined
@@ -43,23 +43,27 @@
                     </div>
 
                     <div>
-                      <q-btn
-                        rounded
-                        color="primary"
-                        size="md"
-                        label="Asignar alumno"
-                        class="w100"
-                        @click="getStudentTeacherByTurn"
-                      />
+                      <div class="ptb-1">
+                        <q-btn
+                          rounded
+                          color="primary"
+                          size="md"
+                          label="Filtrar por turno"
+                          class="w100"
+                          @click="getStudentTeacherByTurn"
+                        />
+                      </div>
 
-                      <q-btn
-                        rounded
-                        color="primary"
-                        size="md"
-                        label="Asignar"
-                        class="w100"
-                        @click="Assign"
-                      />
+                      <div>
+                        <q-btn
+                          rounded
+                          color="primary"
+                          size="md"
+                          label="Asignar"
+                          class="w100"
+                          @click="Assign"
+                        />
+                      </div>
                     </div>
                   </div>
                 </q-card-section>
@@ -132,10 +136,10 @@ export default {
   created() {
     const user = JSON.parse(localStorage.getItem("user"));
     if (user == "" || user == "undefined" || user == null) {
-      this.$router.push("log-in");
+      this.$router.push("/log-in");
     }
     if (user.user.rol != "Admin") {
-      this.$router.push("403");
+      this.$router.push("/403");
     }
   },
 };

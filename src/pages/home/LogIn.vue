@@ -141,6 +141,9 @@ export default {
             case "Admin":
               this.$router.push("admin");
               break;
+            case "Instructor":
+              this.$router.push("instructor");
+              break;
             default:
               break;
           }

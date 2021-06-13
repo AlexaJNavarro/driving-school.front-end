@@ -13,6 +13,7 @@ import MyAccount from 'pages/student/MyAccount.vue'
 
 import AdminHome from 'pages/admin/Home.vue'
 import AdminAssign from 'pages/admin/Assign.vue'
+import NewInstructor from 'pages/admin/NewInstructor.vue'
 const routes = [
   {
     path: '/',
@@ -67,6 +68,10 @@ const routes = [
       {
         path: 'assign',
         component: AdminAssign
+      },
+      {
+        path: 'new-instructor',
+        component: NewInstructor
       }
     ],
   },
