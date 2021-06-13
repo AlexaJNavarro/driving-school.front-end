@@ -3,13 +3,7 @@
     <div class="container">
       <div>
         <div class="ptb-3">
-<<<<<<< HEAD
           <q-img src="../../public/images/home/banner-home.svg"> </q-img>
-=======
-          <q-img
-            src="../../public/images/home/banner-home.svg">
-          </q-img>
->>>>>>> alexa
         </div>
 
         <div class="ptb-3">
@@ -18,12 +12,7 @@
               <h3 class="text-center subtitle">Objetivos</h3>
               <div class="flex justify-center">
                 <p class="text-center text-roboto w60">
-<<<<<<< HEAD
                   Permitir que el estudiante desde la comodidad de tu hogar
-=======
-                  Permitir que el estudiante
-                  desde la comodidad de tu hogar
->>>>>>> alexa
                 </p>
               </div>
             </div>
@@ -42,12 +31,7 @@
               <h3 class="text-center subtitle">Beneficios</h3>
               <div class="flex justify-center">
                 <p class="text-center text-roboto w60">
-<<<<<<< HEAD
                   Permitir que el estudiante desde la comodidad de tu hogar
-=======
-                  Permitir que el estudiante
-                  desde la comodidad de tu hogar
->>>>>>> alexa
                 </p>
               </div>
             </div>

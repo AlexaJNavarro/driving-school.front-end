@@ -37,40 +37,12 @@ const routes = [
       {
         path: '404',
         component: NotFound,
-      },
-      {
-        path: 'listar-alumno',
-        component: ListAlumn,
-      },
-      {
-        path: 'instructor',
-        component: DetalleInstructor
-      },
-      ,
+      },  
       {
         path: 'paquete',
         component: Paquete
-      },
-      {
-        path: 'simulacro',
-<<<<<<< HEAD
-        component: Simulacro,
-        meta: { requieresAuth: true }
       }
-=======
-        component: Simulacro
-      },
-      {
-        path: 'actualizar-notas',
-        component: ActualizarNotas
-      },
-      {
-        path: 'agregar-notas',
-        component: AgregarNotas
-      },
 
-
->>>>>>> alexa
     ]
   },
   {
@@ -80,6 +52,11 @@ const routes = [
       {
         path: 'my-account',
         component: MyAccount
+      },
+      {
+        path: 'simulacro',
+        component: Simulacro,
+        meta: { requieresAuth: true }
       }
     ],
   },
@@ -95,6 +72,29 @@ const routes = [
         path: 'assign',
         component: AdminAssign
       }
+    ],
+  },
+
+  {
+    path: '/instructor',
+    component: () => import('layouts/InstructorLayout.vue'),
+    children: [
+      {
+        path: '',
+        component: DetalleInstructor
+      },
+      {
+        path: 'studends',
+        component: ListAlumn,
+      },
+      {
+        path: 'actualizar-notas',
+        component: ActualizarNotas
+      },
+      {
+        path: 'agregar-notas',
+        component: AgregarNotas
+      },
     ],
   }
 
