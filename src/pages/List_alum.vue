@@ -4,99 +4,40 @@
       <div class="container-banner-listAlumn">
         <q-img class="banner--alumn" src="../../public/img-list-notes/list-alum.png" />
       </div>
-      <!-- <div  v-for="i of 3" :key="i">
-              <div class="container-card">
-              <div class="sub-container-card">
-               <q-card class="my-card">
-                <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" class="img-card"></q-img>
-                <q-card-actions>
-                  <q-btn flat>Comprar</q-btn>
-                  <q-btn flat>Detalle</q-btn>
-                </q-card-actions>
+
+      <div>
+        <div class="container">
+          <div class="flex flex-row justify-center">
+            <div v-for="item of [2, 3, 3, 4, 4]" :key="item">
+              <q-card class="my-card mrl-1 mb-1" style="width: 300px">
+                <q-img
+                  src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"
+                  class="img-card"
+                ></q-img>
+                <div class="container-button-paquete">
+                  <q-card-actions>
+                    <h4>$250</h4>
+                    <div class="q-pa-md q-gutter-sm">
+                      <q-btn
+                        unelevated
+                        rounded
+                        color="primary"
+                        label="Comprar"
+                        class="botton-Comprar"
+                      />
+                      <q-btn
+                        outline
+                        rounded
+                        color="primary"
+                        label="Detalle"
+                        class="botton-Detalle"
+                      />
+                    </div>
+                  </q-card-actions>
+                </div>
               </q-card>
-              </div>
             </div>
-            </div> -->
-      <div class="container-card">
-        <div class="sub-container-card" v-for="i of 3" :key="i">
-          <q-card class="my-card">
-            <q-img
-              src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"
-              class="img-card"
-            ></q-img>
-            <div class="container-button-listAlumn">
-              <q-card-actions>
-                <div class="q-pa-md q-gutter-sm">
-                  <q-btn
-                    unelevated
-                    rounded
-                    color="primary"
-                    label="Actualizar"
-                    class="botton-Actualizar"
-                  />
-                  <q-btn
-                    outline
-                    rounded
-                    color="primary"
-                    label="Eliminar"
-                    class="botton-Eliminar"
-                  />
-                </div>
-              </q-card-actions>
-            </div>
-          </q-card>
-          <q-card class="my-card">
-            <q-img
-              src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"
-              class="img-card"
-            ></q-img>
-            <div class="container-button-listAlumn">
-              <q-card-actions>
-                <div class="q-pa-md q-gutter-sm">
-                  <q-btn
-                    unelevated
-                    rounded
-                    color="primary"
-                    label="Actualizar"
-                    class="botton-Actualizar"
-                  />
-                  <q-btn
-                    outline
-                    rounded
-                    color="primary"
-                    label="Eliminar"
-                    class="botton-Eliminar"
-                  />
-                </div>
-              </q-card-actions>
-            </div>
-          </q-card>
-          <q-card class="my-card">
-            <q-img
-              src="https://static.vecteezy.com/system/resources/previews/001/840/612/non_2x/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg"
-              class="img-card"
-            ></q-img>
-            <div class="container-button-listAlumn">
-              <q-card-actions>
-                <div class="q-pa-md q-gutter-sm">
-                  <q-btn
-                    unelevated
-                    rounded
-                    color="primary"
-                    label="Actualizar"
-                    class="botton-Actualizar"
-                  />
-                  <q-btn
-                    outline
-                    rounded
-                    color="primary"
-                    label="Eliminar"
-                    class="botton-Eliminar"
-                  />
-                </div>
-              </q-card-actions>
-            </div>
-          </q-card>
+          </div>
         </div>
       </div>
     </div>
